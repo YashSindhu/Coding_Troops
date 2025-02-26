@@ -10,6 +10,7 @@ charset-normalizer==3.4.1
 cryptography==44.0.1
 exceptiongroup==1.2.2
 firebase-admin==6.6.0
+flatbuffers==25.2.10
 gast==0.6.0
 google-api-core==2.24.1
 google-api-python-client==2.162.0
@@ -63,8 +64,9 @@ sortedcontainers==2.4.0
 soupsieve==2.6
 tensorboard==2.18.0
 tensorboard-data-server==0.7.2
+tensorflow==2.18.0
 tensorflow-io-gcs-filesystem==0.31.0
-tensorflow==2.17.1
+tensorflow_intel==2.18.0
 termcolor==2.5.0
 trio==0.29.0
 trio-websocket==0.12.2
