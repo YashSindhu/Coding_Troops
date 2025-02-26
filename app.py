@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 import numpy as np
 import pickle
+import os
 
 app = Flask(__name__)
 
@@ -27,4 +28,8 @@ def predict():
     return render_template("index.html", prediction=None)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    
+
+    port = int(os.environ.get("PORT", 10000))  # Render requires a port
+    app.run(host="0.0.0.0", port=port, debug=True)
+
