@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 import pickle
+from transformers import pipeline
 
 # Load dataset
 df = pd.read_csv("career_data.csv")
@@ -29,3 +30,15 @@ pickle.dump(le_interest, open("le_interest.pkl", "wb"))
 pickle.dump(le_career, open("le_career.pkl", "wb"))
 
 print("Model trained and saved successfully!")
+
+
+# Load a pre-trained NLP model
+career_analyzer = pipeline("text-classification", model="distilbert-base-uncased")
+
+def predict_career(user_input):
+    result = career_analyzer(user_input)[0]["label"]
+    return result
+
+# Example
+print(predict_career("I love coding and problem-solving."))
+
