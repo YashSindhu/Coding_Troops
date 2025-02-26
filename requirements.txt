@@ -1,3 +1,4 @@
+--no-cache-dir
 absl-py==2.1.0
 astunparse==1.6.3
 attrs==25.1.0
