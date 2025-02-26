@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Guidance System</title>
+</head>
+<body>
+    <h1>Career Prediction System</h1>
+    <form method="post">
+        Logical Score: <input type="number" name="logical" required><br>
+        Verbal Score: <input type="number" name="verbal" required><br>
+        Quantitative Score: <input type="number" name="quantitative" required><br>
+        Interests: 
+        <select name="interests">
+            <option value="Tech">Tech</option>
+            <option value="Business">Business</option>
+            <option value="Arts">Arts</option>
+            <option value="Science">Science</option>
+        </select><br>
+        <input type="submit" value="Predict Career">
+    </form>
+
+    {% if prediction %}
+    <h2>Recommended Career: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
